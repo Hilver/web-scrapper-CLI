@@ -2,13 +2,13 @@
   "name": "webscrapper",
   "version": "1.0.0",
   "type": "commonjs",
-    "engines": {
-        "node": ">=8.10.0"
-    },
+  "engines": {
+    "node": ">=8.10.0"
+  },
   "description": "A simple web scrapper",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "lint": "eslint ./"
   },
   "keywords": [
@@ -25,7 +25,9 @@
     "request": "^2.88.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^6.0.1",
-    "eslint-plugin-node": "^9.1.0"
+    "eslint-plugin-node": "^9.1.0",
+    "mocha": "^6.1.4"
   }
 }
