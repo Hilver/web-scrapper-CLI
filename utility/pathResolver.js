@@ -6,6 +6,7 @@ const pathResolver = path => {
 			fs.mkdirSync(path)
 		}
 	} catch (err) {
+		// eslint-disable-next-line no-console
 		console.error(err)
 	}
 	return path
