@@ -1,11 +1,15 @@
 const puppeteer = require('puppeteer');
+const pathResolver = require('./utility/pathResolver')
 
 const pageScreenshot = async (website) => {
   const time = Date.now()
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
+  const options = {
+    path: `${pathResolver('screenshots/')}${time}_${website.match(/(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9]))?\./g)}png`
+  }
   await page.goto(website);
-  await page.screenshot({path: `${website.match(/(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9]))?\./g)}png`, width: '1200px'});
+  await page.screenshot(options);
 //   await page.pdf({path: 'filmweb.pdf', format: 'A4'});
 
   await browser.close();
