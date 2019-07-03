@@ -6,7 +6,7 @@ const pageScreenshot = async (website) => {
 	const browser = await puppeteer.launch()
 	const page = await browser.newPage()
 	const options = {
-		path: `${pathResolver('screenshots/')}${time}_${website.match(/(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9]))?\./g)}png`
+		path: `${pathResolver('screenshots')}${time}_${website.match(/(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9]))?\./g)}png`
 	}
 	await page.goto(website)
 	await page.screenshot(options)

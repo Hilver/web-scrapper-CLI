@@ -9,7 +9,7 @@ const pathResolver = path => {
 		// eslint-disable-next-line no-console
 		console.error(err)
 	}
-	return path
+	return `${path}/`
 }
 
 module.exports = pathResolver
