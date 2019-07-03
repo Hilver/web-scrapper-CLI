@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer')
-const pathResolver = require('./utility/pathResolver')
+const pathResolver = require('../utility/pathResolver')
 
 const pageToPdf = async (website) => {
 	const time = Date.now()
