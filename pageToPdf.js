@@ -9,7 +9,7 @@ const pageToPdf = async (website) => {
 		path: `${pathResolver('pdf_files/')}${time}_${website.match(/(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9]))?\./g)}pdf`,
 		format: 'A4'
 	}
-	await page.goto(website)	
+	await page.goto(website)
 	await page.pdf(options)
 
 	await browser.close()

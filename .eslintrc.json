@@ -33,6 +33,9 @@
             "ignores": []
         }],
         "node/shebang": ["error"],
+        "no-trailing-spaces": [2, { 
+            "skipBlankLines": false 
+        }],
         "quotes": [
             "error",
             "single"

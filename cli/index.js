@@ -13,7 +13,7 @@ const main = async () => {
 	})()
 
 	const {website} = response
-	screenScrapper(website)    
+	screenScrapper(website)
 }
 
 main()
