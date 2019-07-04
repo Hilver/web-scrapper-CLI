@@ -8,13 +8,15 @@ const pageScreenshot = async (website, resolution) => {
 	const options = {
 		path: `${pathResolver('screenshots')}${time}_${website.match(/(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9]))?\./g)}png`
 	}
+
 	await page.setViewport(Object.assign({deviceScaleFactor: 1}, resolution))
+	console.log(`Go to ${website}`)
 	await page.goto(website)
 	await page.screenshot(options)
-
+	console.log(`Screenshot has been saved in ${options.path}`)
 	await browser.close()
 	// eslint-disable-next-line no-console
-	console.log(`Time of executing task is: ${(Date.now() - time)/1000} sec.`)
+	console.log(`Task finished in: ${(Date.now() - time)/1000} sec`)
 }
 
 module.exports = pageScreenshot
