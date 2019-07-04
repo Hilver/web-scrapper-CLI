@@ -1,9 +1,10 @@
 const puppeteer = require('puppeteer')
 const pathResolver = require('../utility/pathResolver')
 
-const pageScreenshot = async (website, resolution) => {
+const pageScreenshot = async (settings) => {
+	const {headless, resolution, website} = settings
 	const time = Date.now()
-	const browser = await puppeteer.launch({headless: true})
+	const browser = await puppeteer.launch({headless})
 	const page = await browser.newPage()
 	const options = {
 		path: `${pathResolver('screenshots')}${time}_${website.match(/(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9]))?\./g)}png`
