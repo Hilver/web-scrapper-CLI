@@ -30,7 +30,7 @@ const main = async () => {
 			{
 				type: prev => prev == 'page-screen' ? 'autocomplete' : null,
 				message: 'What resolution do you want to set?',
-				choices: Object.keys(resolutions).map(resolution =>({title: resolution})),
+				choices: Object.keys(resolutions).map(resolution =>({title: resolution, value: resolutions[resolution]})),
 				name: 'resolution'
 			},
 			{
@@ -38,15 +38,25 @@ const main = async () => {
 				message: 'Which site you want to scrap?',
 				name: 'website'
 			},
+			{
+				type: 'confirm',
+				message: 'Use headless browser mode?',
+				initial: true,
+				name: 'headless'
+			}
 		])
 	})()
 
-	const {resolution, task, website} = response
+	const {headless, resolution, task, website} = response
 	const taskDefinition = taskDefinitions[task]
-	const options = [website, resolutions[resolution]]
+	const options = {
+		website,
+		resolution,
+		headless
+	}
 
 	try {
-		await taskDefinition(...options)
+		await taskDefinition(options)
 	}
 	catch (error) {
 		console.error(error)
