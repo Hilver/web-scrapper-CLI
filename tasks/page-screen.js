@@ -12,7 +12,7 @@ const pageScreenshot = async (settings) => {
 
 	await page.setViewport(Object.assign({deviceScaleFactor: 1}, resolution))
 	console.log(`Go to ${website}`)
-	await page.goto(website)
+	await page.goto(website, {waitUntil: 'load'})
 	await page.screenshot(options)
 	console.log(`Screenshot has been saved in ${options.path}`)
 	await browser.close()
