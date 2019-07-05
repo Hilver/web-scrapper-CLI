@@ -34,7 +34,7 @@ const main = async () => {
 				name: 'resolution'
 			},
 			{
-				type: 'text',
+				type: (_, values) => values.task !== 'pajacyk-click' ? 'text' : null,
 				message: 'Which site you want to scrap?',
 				name: 'website'
 			},
