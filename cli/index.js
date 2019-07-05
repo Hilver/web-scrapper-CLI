@@ -39,7 +39,7 @@ const main = async () => {
 				name: 'website'
 			},
 			{
-				type: 'confirm',
+				type: (_, values) => values.task !== 'page-to-pdf' ? 'confirm' : null,
 				message: 'Use headless browser mode?',
 				initial: true,
 				name: 'headless'
