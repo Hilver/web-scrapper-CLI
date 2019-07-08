@@ -1,5 +1,5 @@
 # web-scrapper-CLI :sunglasses: [![Build Status](https://travis-ci.com/Hilver/web-scrapper-CLI.svg?token=4zszxMxi3d59NTKgjQtC&branch=master)](https://travis-ci.com/Hilver/web-scrapper-CLI)
-This is the basic skeleton of the CLI project to scrapping websites automation web tasks.
+This is the basic skeleton of the CLI project for scraping websites and automating web tasks.
 ## Getting Started
 This project requires to install Node (at least ver. 8.00) on your machine. To get the latest version of Node go to this [page](https://nodejs.org/en/).
 ### Installation
