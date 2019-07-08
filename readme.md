@@ -20,7 +20,7 @@ After the installation is complete you can run the CLI by typing:
 $ node cli
 ```
 Run task example:
-![](https://github.com/Hilver/web-scrapper-CLI/media/run-task-example.gif)
+![](./media/run-task-example.gif)
 ## Dependencies
 + [prompts](https://www.npmjs.com/package/prompts) - easy to use CLI prompts to enquire users for information...
 + [Puppeteer](https://github.com/GoogleChrome/puppeteer) - Puppeteer is a Node library which provides a high-level API to control Chrome or Chromium over the DevTools Protocol...
