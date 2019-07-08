@@ -1,4 +1,4 @@
-# web-scrapper-CLI :sunglasses:
+# web-scrapper-CLI :sunglasses: [![Build Status](https://travis-ci.com/Hilver/web-scrapper-CLI.svg?token=4zszxMxi3d59NTKgjQtC&branch=master)](https://travis-ci.com/Hilver/web-scrapper-CLI)
 This is the basic skeleton of the CLI project to scrapping websites automation web tasks.
 ## Getting Started
 This project requires to install Node (at least ver. 8.00) on your machine. To get the latest version of Node go to this [page](https://nodejs.org/en/).
@@ -31,3 +31,7 @@ Since this project had to be an example skeleton, dedicated rather for the begin
 Unless someone will add interesting and universal ideas of tasks worth to be given as example. I'm open to implementing them :ok_hand:
 
 Furthermore if you find any bugs or just want to help with code refactoring, help is always welcome :blush:
+## Donate
+If you liked this project, as a pay you can run `pajacyk-click` task once a day, which will help starving children to get their meals. You can also visit [Pajacyk website](https://www.pajacyk.pl) and donate them directly.
+
+Many thanks! :muscle:
